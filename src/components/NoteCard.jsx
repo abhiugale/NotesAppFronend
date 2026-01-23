@@ -24,7 +24,12 @@ export default function NoteCard({ note, refresh }) {
       <Card elevation={3}>
         <CardContent>
           <Typography variant="h6">{note.title}</Typography>
-          <Typography variant="body2" color="text.secondary">
+
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{ whiteSpace: "pre-wrap" }}
+          >
             {note.content}
           </Typography>
         </CardContent>
