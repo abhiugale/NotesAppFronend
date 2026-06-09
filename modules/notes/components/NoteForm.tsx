@@ -1,7 +1,11 @@
 import { useState } from "react";
-import api from "../api/axios";
+import api from "../../../app/axios/instance";
 
-export default function NoteForm({ refresh }) {
+interface NoteFormProps {
+  refresh: () => void;
+}
+
+export default function NoteForm({ refresh }: NoteFormProps) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
